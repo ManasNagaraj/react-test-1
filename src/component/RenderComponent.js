@@ -9,7 +9,7 @@ export default function RenderComponent() {
 
 
     useEffect(() => {
-        fetch(`http://dev.wildwestrummy-dev.com:8098/sporti/web/home`,{ referrer: "unsafe_url"}).then((response) => response.json())
+        fetch(`http://dev.wildwestrummy-dev.com:8098/sporti/web/home`,{ referrerPolicy: "unsafe_url"}).then((response) => response.json())
             .then((data) => setData(data)).catch((error) => { console.log(error.message) }).finally(() => { setLoading(false) });
 
     },{})
